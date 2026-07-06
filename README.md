@@ -2,8 +2,7 @@
 
 Hey there! Im Disha and WordWeave is my first solo fullstack project! WordWeave is a feature-rich full-stack blogging web application built using **Node.js**, **Express**, and **MongoDB**. It features a modern user dashboard, secure multi-user authentication, privacy controls (Public/Private blogs), dynamic search logic, and a fully responsive interface.
 
----
-
+[![Live Demo](https://shields.io)](http://wordweave-2yk8.onrender.com/)
 ---
 
 ## Features
