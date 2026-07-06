@@ -4,6 +4,9 @@ Hey there! Im Disha and WordWeave is my first solo fullstack project! WordWeave 
 
 ---
 
+# Live Link
+[![Live Demo](https://img.shields.io/badge/WordWeave-pink)](http://wordweave-2yk8.onrender.com/)
+
 ---
 
 ## Features
