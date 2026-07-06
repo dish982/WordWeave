@@ -89,7 +89,7 @@ Hey there! Im Disha and WordWeave is my first solo fullstack project! WordWeave 
    
 ## **Preview**
 
-![Preview](images/wordweave-preview.png)
+![Preview](public/images/wordweave-preview.png)
 
 This project is for educational and portfolio purposes only.
 
