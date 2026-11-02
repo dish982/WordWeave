@@ -1,10 +1,11 @@
 {
-  "name": "task5",
+  "name": "wordweave",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "build:css": "tailwindcss -i ./public/css/input.css -o ./public/css/style.css --minify"
+    "dev":"node --watch app.js"
+
   },
   "keywords": [],
   "author": "",
@@ -17,8 +18,6 @@
     "ejs": "^3.1.10",
     "express": "^5.1.0",
     "express-session": "^1.19.0",
-    "fs": "^0.0.1-security",
-    "marked": "^16.1.2",
     "mongoose": "^9.6.2"
   },
   "devDependencies": {

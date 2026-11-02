@@ -16,12 +16,8 @@ connectDB();
 
 const PORT = process.env.PORT || 3000;
 
-//Set view engine to EJS //Middleware
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
 
 //parse form data
-app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //Serve static files (css, images)
@@ -42,20 +38,13 @@ app.use(session({
     }
 }));
 
-app.use((req, res, next) => {
-    res.locals.user = req.session.user || null;
-    res.locals.error = null;
-    res.locals.success = null;
-    next();
-});
-
 
 //Routes
 const authRoutes = require('./routes/auth'); 
-const blogRoutes = require('./routes/blog');
+// const blogRoutes = require('./routes/blog');
 
-app.use('/auth', authRoutes); 
-app.use('/', blogRoutes);
+app.use('/api/auth', authRoutes); 
+// app.use('/', blogRoutes);
 
 //Start the server 
 app.listen(PORT, () => {
