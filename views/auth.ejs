@@ -35,12 +35,12 @@
             <div class="flex flex-col gap-1.5">
                 <label class="text-xs font-bold uppercase text-gray-600">Email Address</label>
                 <input type="email" name="email" required 
-                       class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-maroon/20 focus:border-maroon focus:bg-white transition-all duration-200">
+                       class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-maroon/20 focus:bg-white transition-all duration-200">
             </div>
             <div class="flex flex-col gap-1.5">
                 <label class="text-xs font-bold uppercase text-gray-600">Password</label>
                 <input type="password" name="password" required 
-                       class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-maroon/20 focus:border-maroon focus:bg-white transition-all duration-200">
+                       class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-maroon/20 focus:bg-white transition-all duration-200">
             </div>
             
             <button type="submit" class="w-full py-3.5 bg-maroon text-white font-bold rounded-xl hover:bg-maroon-hover active:scale-[0.99] transition-all duration-200 text-base shadow-md shadow-maroon/10 mt-2">
@@ -54,24 +54,25 @@
         <form id="signupForm" action="/auth/signup" method="POST" class="space-y-5 hidden">
 
             <div class="flex flex-col gap-1.5">
-                <label class="text-xs font-bold text-gray-500 uppercase">Username</label>
+                <label class="text-xs font-bold text-gray-500 uppercase">Username <span class="font-bold">*</span></label>
+
                 <input 
                     type="text" 
                     name="username" 
                     required 
                     pattern="^[a-zA-Z0-9_-]+$" 
                     title="Username can only contain letters, numbers, underscores, and hyphens."
-                    class="p-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-maroon/20 focus:border-maroon focus:bg-white transition-all">
+                    class="p-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-maroon/20  focus:bg-white transition-all">
             </div>
             <div class="flex flex-col gap-1.5">
                 <label class="text-xs font-bold uppercase text-gray-600">Email Address</label>
                 <input type="email" name="email" required 
-                       class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-maroon/20 focus:border-maroon focus:bg-white transition-all duration-200">
+                       class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-maroon/20 focus:bg-white transition-all duration-200">
             </div>
             <div class="flex flex-col gap-1.5">
                 <label class="text-xs font-bold uppercase text-gray-600">Password</label>
                 <input type="password" name="password" minlength="6" required placeholder="Minimum 6 characters"
-                       class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-maroon/20 focus:border-maroon focus:bg-white transition-all duration-200">
+                       class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-maroon/20 focus:bg-white transition-all duration-200">
             </div>
             
             <button type="submit" class="w-full py-3.5 bg-maroon text-white font-bold rounded-xl hover:bg-maroon-hover active:scale-[0.99] transition-all duration-200 text-base shadow-md shadow-maroon/10 mt-2">
