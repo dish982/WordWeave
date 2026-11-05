@@ -40,7 +40,8 @@ export default function Navbar() {
             <>
               <div className="hidden md:flex items-center gap-2 bg-gray-50 px-3 py-1.5 rounded-xl border border-gray-100">
                 <div className="w-7 h-7 bg-maroon text-white font-bold rounded-full flex items-center justify-center text-xs uppercase shadow-sm">
-                  {user.username.charAt(0)}
+                  {(user?.username || '?').charAt(0).toUpperCase()}
+                  
                 </div>
                 <span className="text-sm font-semibold text-gray-600">{user.username}</span>
               </div>
