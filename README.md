@@ -70,7 +70,7 @@ While migrating, I audited the original app and fixed these issues:
 - Logout was a GET request. It is now a POST.
 - Session cookies are `httpOnly`, `sameSite: lax`, and `secure` in production.
 
-## What I'd Improve
+## Future Enhancements
 
 - Move from PBKDF2 (1000 iterations) to bcrypt or a higher cost, with lazy re-hashing on login.
 - Add rate limiting on login and security headers (`helmet`).
