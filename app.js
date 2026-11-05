@@ -14,7 +14,6 @@ const app = express();
 const isProd = process.env.NODE_ENV === 'production';
 const PORT = process.env.PORT || 3000;
 
-connectDB();
 
 // Render sits behind a proxy; without this, secure cookies won't be set
 app.set('trust proxy', 1);
@@ -37,16 +36,14 @@ app.use(session({
     },
 }));
 
-// ---------- API routes ----------
+//API routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/posts', require('./routes/posts'));
 
-// Unknown /api/... paths get JSON, not HTML
 app.use('/api', (req, res) => {
     res.status(404).json({ error: 'Not found' });
 });
 
-// ---------- Production: serve the React build ----------
 if (isProd) {
     const distPath = path.join(__dirname, 'client', 'dist');
     app.use(express.static(distPath));
@@ -56,13 +53,17 @@ if (isProd) {
     });
 }
 
-// ---------- Error handler (must have 4 params) ----------
 app.use((err, req, res, next) => {
     console.error(err);
     const status = err.status || 500;
     res.status(status).json({ error: status === 400 ? 'Invalid request body' : 'Server error' });
 });
 
-app.listen(PORT, () => {
+if(require.main === module){
+    connectDB();
+    app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}/`);
-});
+    });
+}
+
+module.exports = app;
